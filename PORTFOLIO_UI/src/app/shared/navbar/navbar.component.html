@@ -1,0 +1,36 @@
+ <header class="flex justify-between shadow-lg p-4 relative">
+  <div class="flex items-center gap-4 cursor-pointer">
+    <div class="w-12 md:w-14">
+      <img src="../../../assets/images/logo.svg" alt="logo" />
+    </div>
+    <div class="text-base uppercase font-semibold">Sachin Gaikwad</div>
+  </div>
+  <nav class="flex items-center xs:hidden sm:hidden md:hidden lg:flex">
+    <ul class="flex gap-x-12">
+      <li class="font-semibold text-base"><a href="#">Home</a></li>
+      <li class="font-semibold text-base"><a href="#">About</a></li>
+      <li class="font-semibold text-base"><a href="#">Work</a></li>
+      <li class="font-semibold text-base"><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <nav
+    class="absolute top-[90px] z-10 left-0 text-center w-[100vw] h-[100vh] shadow-lg lg:hidden bg-white"
+  >
+    <ul class="flex flex-col gap-y-8 pt-8" [ngClass]="{'flex':isMobileMenuOpen, 'hidden': !isMobileMenuOpen}">
+      <li class="font-semibold text-base"><a href="#">Home</a></li>
+      <li class="font-semibold text-base"><a href="#">About</a></li>
+      <li class="font-semibold text-base"><a href="#">Work</a></li>
+      <li class="font-semibold text-base"><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="flex items-center lg:hidden" (click)="toggleMobileMenu()" [ngClass]="{'hidden':isMobileMenuOpen}">
+    <i class="fa-solid fa-bars-staggered text-3xl"></i>
+  </div>
+  <div class="flex items-center lg:hidden" (click)="toggleMobileMenu()" [ngClass]="{'hidden':!isMobileMenuOpen}">
+    <i class="fa-solid fa-xmark text-3xl"></i>
+  </div>
+</header>
+
+
+

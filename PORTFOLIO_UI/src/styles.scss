@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+    font-family: 'SF Display';
+    src: url('./assets/fonts/sf-pro-display-font/SF-Pro-Display-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins/Poppins-Light.ttf');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+}
+body{
+    overflow-x: hidden;
+}

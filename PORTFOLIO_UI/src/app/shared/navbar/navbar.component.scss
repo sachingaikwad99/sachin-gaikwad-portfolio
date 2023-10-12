@@ -1,0 +1,17 @@
+@import '../../../../src/color_variables.scss';
+
+nav {
+   ul li::after {
+    content: '';
+    width: 0%;
+    background-color: $primary;
+    display: block;
+    margin: auto;
+    height: 2px;
+    transition:0.6s;
+   }
+
+   ul li:hover::after {
+    width: 100%;
+   }
+}
